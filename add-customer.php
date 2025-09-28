@@ -16,7 +16,7 @@
             <label for="customer_email"><b>Email:</b></label>
             <input type="email" name="customer_email" id="customer_email" required><br><br>
             <label for="customer_phone"><b>Phone:</b></label>
-            <input type="number " name="customer_phone" id="customer_phone" required><br><br>
+            <input type="number" inputmode="numeric" name="customer_phone" id="customer_phone" required><br><br>
             <button type="submit">Add Customer</button>
         </form>
     </center>

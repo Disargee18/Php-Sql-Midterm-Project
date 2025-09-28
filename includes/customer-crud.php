@@ -3,7 +3,8 @@
 
     $action = isset($_POST['action']) ? $_POST['action'] : $_GET['action'];
 
-    if($action == 'create'){
+    if($action == 'create')
+    {
 
         $customer_name = $_POST['customer_name'];
         $customer_email = $_POST['customer_email'];  
@@ -15,9 +16,10 @@
             ':customer_email' => $customer_email,
             ':customer_phone' => $customer_phone
         ]);
-        header("Location: ../index.php");
+        header("Location: ../customers.php");
         exit; 
     }
+
 
     if($action == 'edit')
     {
@@ -33,7 +35,7 @@
             ':customer_phone' => $customer_phone,
             ':id' => $id
         ]);
-        header("Location: ../index.php");
+        header("Location: ../customers.php");
         exit;
     }
 
@@ -47,7 +49,7 @@
         $stmt->execute([
             ':id'=>$id
         ]);
-        header("Location: ../index.php");
+        header("Location: ../customers.php");
         exit;
     }
 ?>
