@@ -35,7 +35,7 @@
         <a href="add-product.php">Add Product</a>
         <br><br>
         <form action="" method="get">
-            <table border="1">
+            <table border="1" cellpadding="8">
                 <tr>
                     <th>ID</th>
                     <th>Product Name</th>
@@ -49,7 +49,8 @@
                         <td><?=$product['product_name']?></td>
                         <td><?= "₱".$product['product_price']?></td>
                         <td><?=$product['product_quantity']?></td>
-                        <td><a href="edit-product.php?action=edit&id=<?=$product['product_id']?>">Edit</a> | <a href="includes/product-crud.php?action=delete&id=<?=$product['product_id']?>">Delete</a></td>
+                        <td><a href="edit-product.php?action=edit&id=<?=$product['product_id']?>">Edit</a> | <a href="includes/product-crud.php?action=delete&id=<?= $product['product_id'] ?>" onclick="return confirm('Are you sure you want to delete <?= $product['product_name'] ?>?');">Delete</a>
+
                     </tr>
                 <?php endforeach; ?>
             </table>

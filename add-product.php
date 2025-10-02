@@ -7,6 +7,10 @@
 </head>
 <body>
     <center>
+        <a href="customers.php">Customer's Page</a> |
+        <a href="products.php">Product's Page</a> |
+        <a href="sales.php">Sale's Page</a>
+        <br><br>
         <h1>Add Product</h1>
         <br>
         <form action="includes/product-crud.php" method="post">

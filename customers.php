@@ -35,7 +35,7 @@
         <a href="add-customer.php">Add Customer</a>
         <br><br>
         <form action="" method="get">
-            <table border="1">
+            <table border="1" cellpadding="8">
                 <tr>
                     <th>ID</th>
                     <th>Customer Name</th>
@@ -49,7 +49,8 @@
                         <td><?=$customer['customer_name']?></td>
                         <td><?=$customer['customer_email']?></td>
                         <td><?=$customer['customer_phone']?></td>
-                        <td><a href="edit-customer.php?action=edit&id=<?=$customer['customer_id']?>">Edit</a> | <a href="includes/customer-crud.php?action=delete&id=<?=$customer['customer_id']?>">Delete</a></td>
+                        <td><a href="edit-customer.php?action=edit&id=<?=$customer['customer_id']?>">Edit</a> | <a href="includes/customer-crud.php?action=delete&id=<?= $customer['customer_id'] ?>" onclick="return confirm('Are you sure you want to delete <?= $customer['customer_name'] ?>?');">Delete</a>
+
                     </tr>
                 <?php endforeach; ?>
             </table>
